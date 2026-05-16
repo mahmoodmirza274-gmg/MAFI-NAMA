@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorry Bachi! 🥺</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            /* Pink and Purple Gradient Theme */
+            background: linear-gradient(135deg, #ff7eb3, #b06ab3); 
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+            overflow: hidden;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(10px);
+            max-width: 90%;
+            width: 450px;
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+        }
+        .buttons {
+            margin-top: 30px;
+            position: relative;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+        button {
+            padding: 12px 25px;
+            font-size: 1.1rem;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: 0.3s;
+            outline: none;
+        }
+        #yesBtn {
+            background-color: #ff4081;
+            color: white;
+            box-shadow: 0 4px 15px rgba(255, 64, 129, 0.4);
+            z-index: 10;
+        }
+        #yesBtn:hover {
+            background-color: #f50057;
+            transform: scale(1.1);
+        }
+        #noBtn {
+            background-color: white;
+            color: #b06ab3;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Sorry Bachi! 🥺❤️</h1>
+        <p>Meri pyari Bachi, mujhe maaf kar de yaar. Main janta hu main thoda bewakoof hu kabhi kabhi, aur galti meri hai, par main tujhse pyaar sabse zyada karta hu.</p>
+        <p>Mera din nahi guzarta tere bina. Tera gussa hona bilkul banta hai, par ab maan bhi jaa na meri jaan. Aage se aisi galti bilkul nahi hogi, pakka promise! Please? 🥺</p>
+        
+        <div class="buttons">
+            <button id="yesBtn" onclick="alert('Yayyy! I love you Bachi! ❤️ Meri life ki sabse best cheez tu hi hai!')">Maan Gayi! 😘</button>
+            <button id="noBtn" onmouseover="moveButton()" onclick="moveButton()">Nahi Manungi 😤</button>
+        </div>
+    </div>
+
+    <script>
+        function moveButton() {
+            var btn = document.getElementById('noBtn');
+            var x = Math.random() * (window.innerWidth - btn.offsetWidth - 50);
+            var y = Math.random() * (window.innerHeight - btn.offsetHeight - 50);
+            
+            btn.style.position = 'fixed';
+            btn.style.left = x + 'px';
+            btn.style.top = y + 'px';
+        }
+    </script>
+</body>
+</html>
